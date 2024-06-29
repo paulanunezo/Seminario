@@ -21,7 +21,7 @@ lm1 <- lm(Consum_aceite ~ ., data = diseno_pb)
 lm <- aov(Consum_aceite ~ ., data = diseno_pb)
 summary(lm);summary(lm1)
 
-
+# Efectos y efectos principales
 promedios_positivos <- sapply(diseno_pb[, -ncol(diseno_pb)], function(x) mean(diseno_pb$Consum_aceite[x == 1]))
 promedios_negativos <- sapply(diseno_pb[, -ncol(diseno_pb)], function(x) mean(diseno_pb$Consum_aceite[x == -1]))
 
